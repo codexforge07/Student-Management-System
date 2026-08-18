@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="student-page">
+      <div class="student-container">
+        <!-- ================= FORM ================= -->
+
+        <section class="student-form-card">
+          <div class="card-heading">
+            <span class="card-label">STUDENT</span>
+
+            <h1>Add Student</h1>
+
+            <p>Enter the student's information below.</p>
+          </div>
+
+          <form id="studentForm">
+            <div class="form-group">
+              <label for="studentName">Name</label>
+
+              <input type="text" id="studentName" name="studentName" placeholder="Enter student name" />
+
+              <small class="name-error">Enter valid name</small>
+            </div>
+
+            <div class="form-group">
+              <label for="studentAge">Age</label>
+
+              <input type="number" id="studentAge" name="studentAge" placeholder="Enter student age" />
+
+              <small class="age-error">Enter valid age</small>
+            </div>
+
+            <div class="form-group">
+              <label for="studentRoll">Roll No</label>
+
+              <input type="number" id="studentRoll" name="studentRoll" placeholder="Enter roll number" />
+
+              <small class="roll-error">Enter valid roll no</small>
+            </div>
+
+            <button type="submit" id="addStudentBtn">Add Student</button>
+          </form>
+        </section>
+
+        <!-- ================= STUDENT DETAILS ================= -->
+
+        <section class="student-details-card">
+          <div class="details-header">
+            <div>
+              <span class="card-label">RECORD</span>
+
+              <h2>Student Details</h2>
+            </div>
+
+            <span class="student-count" id="studentCount">
+              <strong class="student-num">0</strong>
+              Students
+            </span>
+          </div>
+
+          <div class="student-search">
+            <input type="text" id="studentSearch" placeholder="Search by name or roll number" />
+          </div>
+
+          <div class="student-list" id="studentList"></div>
+          <div class="roll-popup" id="rollPopup">
+            <div class="roll-popup-icon">!</div>
+
+            <div class="roll-popup-content">
+              <strong>Duplicate Roll Number</strong>
+              <span>This roll number already exists.</span>
+            </div>
+
+            <button class="roll-popup-close" id="rollPopupClose">&times;</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
